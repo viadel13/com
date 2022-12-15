@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import Menu from './composants/Menu';
+import { BrowserRouter, Route} from 'react-router-dom';
+import Console from './composants/Console';
+import Accueil from './composants/Accueil';
 
 class App extends Component {
   render() {
     return (
-      <div>
-          <Menu />
-      </div>
+      <BrowserRouter>
+        <Route exact path="/" component={Accueil}></Route>
+        <Route path="/Console" component={Console}></Route>
+      </BrowserRouter>
     )
   }
 }

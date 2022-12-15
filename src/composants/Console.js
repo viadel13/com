@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import Menu from './Menu'
 
 class Console extends Component {
   render() {
     return (
       <div>
-        Bonjour
+        <Menu />
+        Console
       </div>
     )
   }
