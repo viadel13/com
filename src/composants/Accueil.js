@@ -4,20 +4,46 @@ import Menu from './Menu';
 import data from './data';
 import Details from './Details';
 
+
 class Accueil extends Component {
 
     state = {
         details : [],
         search : '',
-        // id : '',
-        // nom : '',
-        // prix : '',
-        // qteTotal : '',
         bool : false,
-        // idCopie : [],
-        test : ''
+        client : '',
+        code : ''
+        
     }
 
+       
+    HandleClient = (e)=>{
+        this.setState({
+            client : e.target.value
+        })
+    }
+
+    HandleCode = (e)=>{
+        this.setState({
+            code : e.target.value
+        })
+    }
+
+    envoyer = ()=>{
+        
+      
+
+        console.log(`nom : ${this.state.client} code : ${this.state.code}`)
+        
+        
+
+        this.setState({
+            client : '',
+            code : '',
+            details : [{}]
+        })
+
+    }
 
 
     handleQteInitial = (e) =>{
@@ -64,10 +90,15 @@ class Accueil extends Component {
         {/* <button onClick={this.plus}>Change</button> */}
         <div className='col-12 col-md-6 card '>
             <Details 
-                stateDetails={this.state.details} 
+                stateDetails={this.state.details}
                 bool={this.state.bool}  
                 handleQteInitial={this.handleQteInitial}
                 subTotal = {this.subTotal}
+                HandleClient = {this.HandleClient}
+                HandleCode = {this.HandleCode}
+                envoyer = {this.envoyer}
+                client = {this.state.client}
+                code = {this.state.code}
             />
         </div>
         
