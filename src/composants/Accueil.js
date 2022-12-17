@@ -14,8 +14,29 @@ class Accueil extends Component {
         // prix : '',
         // qteTotal : '',
         bool : false,
-        idCopie : [],
-        test : [{name:''}]
+        // idCopie : [],
+        test : ''
+    }
+
+
+
+    handleQteInitial = (e) =>{
+        const stateCopie = [...this.state.details]
+        stateCopie[0].qteInitial = e.target.value
+        if(stateCopie[0].qteInitial >= 0){
+            this.setState({
+                details : stateCopie
+            })
+        }
+     
+      
+    }
+
+    subTotal = (qteInitial,  prix) =>{
+        
+        let s = qteInitial * prix;
+        
+        return s;
     }
 
     search = (e) =>{
@@ -24,16 +45,14 @@ class Accueil extends Component {
         })
     }
 
-    handleClick = (id, name, prix, qteTotal, idCopie, qteInitial) =>{
+    handleClick = (id, name, prix, qteTotal, qteInitial) =>{
     
         this.setState({
-            details : [...this.state.details, {id, name, prix, qteTotal, qteInitial}],
-            idCopie : [...this.state.idCopie, idCopie],
+            details : [{ id, name, prix, qteTotal, qteInitial}],
+            // idCopie : [...this.state.idCopie, idCopie],
             bool : true
 
         })  
-
-     
     }
   
 
@@ -44,7 +63,12 @@ class Accueil extends Component {
       <>
         {/* <button onClick={this.plus}>Change</button> */}
         <div className='col-12 col-md-6 card '>
-            <Details stateDetails={this.state.details} bool={this.state.bool} plus={this.plus} />
+            <Details 
+                stateDetails={this.state.details} 
+                bool={this.state.bool}  
+                handleQteInitial={this.handleQteInitial}
+                subTotal = {this.subTotal}
+            />
         </div>
         
         <div className='col-12 col-md-6 card'>
@@ -59,7 +83,7 @@ class Accueil extends Component {
                     }).map((i, index)=>{
                         return(
                             <Fragment key={index}>
-                                <div className='col-12 col-sm-2 col-md-6 my-4 imageProduit' onClick={()=>this.handleClick(i.id, i.name, i.prix, i.qteTotal, i.idCopie, i.qteInitial)} >
+                                <div className='col-12 col-sm-2 col-md-6 my-4 imageProduit' onClick={()=>this.handleClick(i.id, i.name, i.prix, i.qteTotal, i.qteInitial)} >
                                     <img src={i.image}className='img-fluid imgProd' alt={i.name} />
                                     <div className='titreProd'>
                                         <h3>{i.name}</h3>
