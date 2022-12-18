@@ -40,7 +40,7 @@ class Details extends PureComponent {
                             <th scope="col">Produit</th>
                             <th scope="col">Prix</th>
                             <th scope="col">Quantite</th>
-                            <th scope="col">Total</th>
+                            <th scope="col">Quantite Total</th>
                         </tr>
                     </thead>
                     <tbody>

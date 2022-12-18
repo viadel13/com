@@ -1,15 +1,118 @@
+/* mobile */
+
+@media screen and (max-width : 767px) {
+
+    .form-sear{
+        border: 1px solid rgb(194, 191, 191);
+        border-radius: 14px;
+        width: 18em;
+        height: 2.5em;
+    }
+    .imgSear{
+        position: absolute;
+        right: 30px;
+        top: 0;
+        bottom: 0;
+     }
+ 
+     thead{
+         display: none;
+     }
+ 
+     tr, tbody, td, table{
+         display: block;
+         margin-bottom: 25px;
+     }
+ 
+     tr{
+         margin-bottom: 25px;
+         border-radius: 12px;
+         box-shadow: 2px 1px 3px black;
+     }
+     .sup, .th{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+     .sup button{
+         font-size: 20px;
+     }
+ 
+     td{
+         text-align: right;
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+     
+     td::before{
+         content: attr(data-label);
+         position: absolute;
+         left: 0;
+         padding-left: 15px;
+         font-weight: bold;
+         font-size: 15px;
+     }
+ 
+     .imageProduit{
+         background-color: #ece8e8;
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 12px;
+         margin: 0 9px;
+         width: 80%;
+         /* border: 1px solid rgb(31, 73, 190); */
+         box-shadow: 0 10px 20px rgb(192, 215, 247);
+         display: flex;
+         flex-direction: column;
+         overflow: hidden;
+         border-radius: 12px;
+     }
+
+     .imageProduit:active{
+        background-color: rgb(36, 131, 168);
+     }
+
+     .imageProduit img{
+         width: 9em;
+         height: 8em;
+     }
+     .testi{
+         display: flex;
+         justify-content: center;
+     }
+ 
+ }
+
+
 .form-sear{
     border: 1px solid black;
     border-radius: 14px;
  }
- 
- @media (min-width: 1200px) {
-     .form-sear {
-         border: 1px solid black;
-         width: 23rem;
-     }
- 
+ .formSea{
+    position: relative;
+ }
+
+ .imgSear{
+    position: absolute;
+    right: 30px;
+    top: 3px;
+    bottom: 0;
+ }
+
+/* pc */
+
+ @media screen and (min-width: 1024px) {
    
+    .form-sear{
+        border: 1px solid rgb(194, 191, 191);
+        border-radius: 14px;
+        width: 32em;
+        height: 2.5em;
+    }
  }
  
  .search{
@@ -178,78 +281,14 @@
  .numQte input{
     width: 85px;
  }
- 
- @media only screen and (max-width : 700px) {
-    
- 
-     thead{
-         display: none;
-     }
- 
-     tr, tbody, td, table{
-         display: block;
-         margin-bottom: 25px;
-     }
- 
-     tr{
-         margin-bottom: 25px;
-         border-radius: 12px;
-         box-shadow: 2px 1px 3px black;
-     }
-     .sup, .th{
-         display: flex;
-         justify-content: center;
-         align-items: center;
-     }
-     .sup button{
-         font-size: 20px;
-     }
- 
-     td{
-         text-align: right;
-         position: relative;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-     }
-     
-     td::before{
-         content: attr(data-label);
-         position: absolute;
-         left: 0;
-         padding-left: 15px;
-         font-weight: bold;
-         font-size: 15px;
-     }
- 
-     .imageProduit{
-         background-color: #ece8e8;
-         position: relative;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         padding: 12px;
-         margin: 0 9px;
-         width: 80%;
-         /* border: 1px solid rgb(31, 73, 190); */
-         box-shadow: 0 10px 20px rgb(192, 215, 247);
-         display: flex;
-         flex-direction: column;
-         overflow: hidden;
-         border-radius: 12px;
-     }
 
-     .imageProduit:active{
-        background-color: rgb(36, 131, 168);
-     }
+ @media screen and (min-width : 767px) and (max-width : 1023px) {
 
-     .imageProduit img{
-         width: 9em;
-         height: 8em;
-     }
-     .testi{
-         display: flex;
-         justify-content: center;
-     }
- 
+    .form-sear{
+        border: 1px solid rgb(194, 191, 191);
+        border-radius: 14px;
+        width: 18em;
+        height: 2.5em;
+    }
  }
+ 
