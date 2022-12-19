@@ -2,6 +2,7 @@
 
 @media screen and (max-width : 767px) {
 
+
     .form-sear{
         border: 1px solid rgb(194, 191, 191);
         border-radius: 14px;
@@ -107,6 +108,9 @@
 
  @media screen and (min-width: 1024px) {
    
+    .toggle{
+        display: none;
+    }
     .form-sear{
         border: 1px solid rgb(194, 191, 191);
         border-radius: 14px;
@@ -281,6 +285,9 @@
  .numQte input{
     width: 85px;
  }
+
+ 
+
 
  @media screen and (min-width : 767px) and (max-width : 1023px) {
 
