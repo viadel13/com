@@ -9,13 +9,7 @@
         width: 18em;
         height: 2.5em;
     }
-    .imgSear{
-        position: absolute;
-        right: 30px;
-        top: 0;
-        bottom: 0;
-     }
- 
+   
      thead{
          display: none;
      }
@@ -99,8 +93,8 @@
 
  .imgSear{
     position: absolute;
-    right: 30px;
-    top: 3px;
+    right: 20px;
+    top: 5px;
     bottom: 0;
  }
 

@@ -4,8 +4,8 @@ class Details extends PureComponent {
     
   render() {
     
-    const{stateDetails, bool, handleQteInitial, subTotal, HandleClient, HandleCode, envoyer, client, code} = this.props
- 
+    const{stateDetails, val, bool, handleQteInitial, subTotal, HandleClient, HandleCode, envoyer, client, code} = this.props
+
     return (
         <>
           
@@ -95,8 +95,21 @@ class Details extends PureComponent {
 
                 <div className="bouton">
                     <button className="btn btn-danger">CANCEL</button>
-               
-                    <button className="btn btn-primary" onClick={envoyer}>PAYEMENT</button>
+                    {
+                        val 
+                        
+                        ?  
+                            client === '' 
+                            
+                            ? <button disabled  style={{color : 'red', fontWeight : 'bold'}} className="btn btn-primary" onClick={envoyer}>PAYEMENT</button>
+
+                            : 
+                        
+                        <button  className="btn btn-primary" onClick={envoyer}>PAYEMENT</button>
+                        
+                        : <button disabled  style={{color : 'red', fontWeight : 'bold'}} className="btn btn-primary" onClick={envoyer}>PAYEMENT</button>
+                    }
+                   
                 </div>
             </form>
          

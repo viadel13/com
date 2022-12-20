@@ -10,7 +10,8 @@ const Hoc = (Enfant)=> {
             search : '',
             bool : false,
             client : '',
-            code : ''  
+            code : '' ,
+            val : false
         }
       
         HandleClient = (e)=>{
@@ -27,17 +28,8 @@ const Hoc = (Enfant)=> {
 
         envoyer = ()=>{
             
-        
+            console.log(`nom : ${this.state.client} Items : ${this.state.details[0].qteInitial} Total : ${this.subTotal} `)
 
-            console.log(`nom : ${this.state.client} code : ${this.state.code}`)
-            
-            
-
-            this.setState({
-                client : '',
-                code : '',
-                details : [{}]
-            })
 
         }
 
@@ -56,14 +48,13 @@ const Hoc = (Enfant)=> {
 
         subTotal = (qteInitial,  prix) =>{
             
-            let s = qteInitial * prix;
-            
+            let s = qteInitial * prix;            
             return s;
         }
 
         search = (e) =>{
             this.setState({
-                search : e.target.value
+                search : e.target.value,
             })
         }
 
@@ -72,7 +63,8 @@ const Hoc = (Enfant)=> {
             this.setState({
                 details : [{ id, name, prix, qteTotal, qteInitial}],
                 // idCopie : [...this.state.idCopie, idCopie],
-                bool : true
+                bool : true,
+                val : true
 
             })  
         }
@@ -90,6 +82,7 @@ const Hoc = (Enfant)=> {
                     handleQteInitial={this.handleQteInitial}
                     envoyer={this.envoyer}
                     subTotal={this.subTotal}
+                  
                 />
                 )
         }
