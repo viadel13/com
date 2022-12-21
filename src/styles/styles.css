@@ -2,7 +2,9 @@
 
 @media screen and (max-width : 767px) {
 
-
+    .hamburger{
+        display: block;
+    }
     .form-sear{
         border: 1px solid rgb(194, 191, 191);
         border-radius: 14px;
@@ -82,6 +84,50 @@
  
  }
 
+ /* pc */
+
+ @media screen and (min-width: 1024px) {
+   
+    .toggle{
+        display: none;
+    }
+    .form-sear{
+        border: 1px solid rgb(194, 191, 191);
+        border-radius: 14px;
+        width: 32em;
+        height: 2.5em;
+    }
+
+ }
+
+
+@media screen and (min-width : 767px) and (max-width : 1023px) {
+
+    .form-sear{
+        border: 1px solid rgb(194, 191, 191);
+        border-radius: 14px;
+        width: 18em;
+        height: 2.5em;
+    }
+ }
+
+ 
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(15, 15, 15);
+}
+ 
+
 
 .form-sear{
     border: 1px solid black;
@@ -98,20 +144,7 @@
     bottom: 0;
  }
 
-/* pc */
 
- @media screen and (min-width: 1024px) {
-   
-    .toggle{
-        display: none;
-    }
-    .form-sear{
-        border: 1px solid rgb(194, 191, 191);
-        border-radius: 14px;
-        width: 32em;
-        height: 2.5em;
-    }
- }
  
  .search{
      height: 50px;
@@ -136,13 +169,7 @@
      background-color: rgb(82, 78, 78);
  }
  
- @media (max-width: 576px) {
-     .menu{
-         display: flex;
-         flex-direction: column;
-     } 
- }
- 
+
  
  .acceuil, .console,  .android, .ordinateur{
      width: 8em;
@@ -280,16 +307,10 @@
     width: 85px;
  }
 
- 
+.modal-header{
+    background-color: rgb(93, 117, 224);
+}
 
 
- @media screen and (min-width : 767px) and (max-width : 1023px) {
 
-    .form-sear{
-        border: 1px solid rgb(194, 191, 191);
-        border-radius: 14px;
-        width: 18em;
-        height: 2.5em;
-    }
- }
- 
+

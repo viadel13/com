@@ -5,7 +5,7 @@ class Details extends PureComponent {
   render() {
     
     const{stateDetails, val, bool, handleQteInitial, subTotal, HandleClient, HandleCode, envoyer, client, code} = this.props
-
+   
     return (
         <>
           
@@ -29,7 +29,6 @@ class Details extends PureComponent {
                         placeholder="Barcode Scanner"
                         value={code}
                         onChange={HandleCode}
-                        required
                     />
                 </div>
                 
@@ -105,14 +104,34 @@ class Details extends PureComponent {
 
                             : 
                         
-                        <button  className="btn btn-primary" onClick={envoyer}>PAYEMENT</button>
+                        <button  className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={envoyer}>PAYEMENT</button>
                         
                         : <button disabled  style={{color : 'red', fontWeight : 'bold'}} className="btn btn-primary" onClick={envoyer}>PAYEMENT</button>
                     }
                    
                 </div>
             </form>
-         
+        
+            <div className="modal fade pop" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-content">
+                    <div className="modal-header">
+                        <h1 className="modal-title fs-5 text-white" id="exampleModalLabel">Details Produit</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                        <h5 className=' fs-5'>Client : {client}</h5>
+                        <h5 className=' fs-5'>Designation : {stateDetails.map((i)=>i.name)}</h5>
+                        <h5 className='fs-5'>Items : {stateDetails.map((i)=>i.qteInitial)}</h5>
+                        <h5 className='fs-5'>Total : {stateDetails.map((i)=>subTotal(i.qteInitial, i.prix))} FRCFA</h5>
+                    </div>
+                    <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        <button type="button" className="btn btn-primary">Envoyer</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </>
         
     )

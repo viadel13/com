@@ -21,7 +21,7 @@ class Accueil extends Component {
         HandleClient,
         envoyer,
         HandleCode
-
+        
         } = this.props
     
     return (
@@ -39,6 +39,7 @@ class Accueil extends Component {
                 client = {state.client}
                 code = {state.code}
                 val = {state.val}
+         
             />
         </div>
         

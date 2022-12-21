@@ -28,9 +28,7 @@ const Hoc = (Enfant)=> {
 
         envoyer = ()=>{
             
-            console.log(`nom : ${this.state.client} Items : ${this.state.details[0].qteInitial} Total : ${this.subTotal} `)
-
-
+ 
         }
 
 
