@@ -1,10 +1,10 @@
 import React from 'react'
-import Preloader from '../images/Preloader.svg'
+import prelo from '../images/prelo.svg'
 
 function Loader() {
   return (
     <div className='loader'>
-        <img src={Preloader} alt='Preloader' />
+        <img src={prelo} alt='Preloader' width={290} />
     </div>
   )
 }

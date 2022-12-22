@@ -27,7 +27,7 @@ class App extends Component {
         this.setState({
             loader : false
         })
-    }, 2000)
+    }, 3000)
 
     return (
       <div className='container-fluid app'>
