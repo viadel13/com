@@ -273,7 +273,22 @@
  .titreTableau tr th{
      background-color: #f8efef44;  
  }
- 
+
+ .app{
+    height: 100vh;
+    position: relative;
+ }
+
+ .loa{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+ }
+
+
  tbody .det{
      background-color: #d3cece44;
      

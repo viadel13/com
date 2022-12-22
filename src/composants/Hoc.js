@@ -26,9 +26,8 @@ const Hoc = (Enfant)=> {
             })
         }
 
-        envoyer = ()=>{
-            
- 
+        envoyer = (e)=>{
+            e.preventDefault()
         }
 
 

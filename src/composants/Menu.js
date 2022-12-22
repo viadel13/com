@@ -16,6 +16,7 @@ class Menu extends Component {
                             <Link className="nav-link menuChildren android" to="/Android">Android</Link>
                             <Link className="nav-link menuChildren ordinateur" to="/Ordinateur">Ordinateur</Link>
                             <Link className="nav-link menuChildren console" to="/Console">Console</Link> 
+                      
                         </div>
                     </div>
                 </div>

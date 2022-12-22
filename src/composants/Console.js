@@ -5,8 +5,16 @@ import data from './data'
 import Details from './Details'
 import Hoc from './Hoc'
 
+
+
 class Console extends Component {
+
   render() {
+
+    console.log(this.props)
+    
+
+  
     const{
         
       handleClick, 
