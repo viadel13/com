@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/com/static/css/main.4b49e31c.css",
-    "main.js": "/com/static/js/main.2ec43a4b.js",
+    "main.js": "/com/static/js/main.43110c02.js",
     "static/media/pes3.png": "/com/static/media/pes3.ef25ad935373458c09e9.png",
     "static/media/desktop.png": "/com/static/media/desktop.89a9509d8a291591edaa.png",
     "static/media/android.png": "/com/static/media/android.86b03169843aeb339f4b.png",
     "static/media/laptop.png": "/com/static/media/laptop.a5551d0e5343bbe11e31.png",
     "static/media/pes4.png": "/com/static/media/pes4.9046742825a4b0f54582.png",
-    "static/media/Preloader.svg": "/com/static/media/Preloader.8ef006faa720828f38ef2c487983a2d1.svg",
+    "static/media/prelo.svg": "/com/static/media/prelo.4cce8cc5c67b8aea8aa3bc4db734ecca.svg",
     "index.html": "/com/index.html",
     "static/media/search.svg": "/com/static/media/search.c444dadcd8a54fd0ecafcc99bfab5e7d.svg",
     "main.4b49e31c.css.map": "/com/static/css/main.4b49e31c.css.map",
-    "main.2ec43a4b.js.map": "/com/static/js/main.2ec43a4b.js.map"
+    "main.43110c02.js.map": "/com/static/js/main.43110c02.js.map"
   },
   "entrypoints": [
     "static/css/main.4b49e31c.css",
-    "static/js/main.2ec43a4b.js"
+    "static/js/main.43110c02.js"
   ]
 }
